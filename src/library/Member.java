@@ -4,11 +4,13 @@ public class Member {
     String name;
     String member;
     int number;
+    Book borrowedBook;
 
     public Member(String name, String member, int number) {
         this.name = name;
         this.member = member;
         this.number = number;
+        this.borrowedBook = null;
     }
 
     public String getName() {
@@ -35,12 +37,21 @@ public class Member {
         this.number = number;
     }
 
+    public Book getBorrowedBook() {
+        return borrowedBook;
+    }
+
+    public void setBorrowedBook(Book borrowedBook) {
+        this.borrowedBook = borrowedBook;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
                 "name='" + name + '\'' +
                 ", member='" + member + '\'' +
                 ", number=" + number +
+                ", borrowedBook=" + borrowedBook +
                 '}';
     }
 }
